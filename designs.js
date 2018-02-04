@@ -1,7 +1,7 @@
 // Select color input
 /*eslint-env jquery */
 
-var numColor=0;
+var numColor=$("#colorPicker").val();
 var numGridHeight=1;
 var numGridWidth=1;
 
