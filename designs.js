@@ -1,9 +1,9 @@
 // Select color input
 /*eslint-env jquery */
 
-var numColor=$("#colorPicker").val();
-var numGridHeight=1;
-var numGridWidth=1;
+let numColor=$("#colorPicker").val();
+let numGridHeight=1;
+let numGridWidth=1;
 
 $("#colorPicker").on("change",function getColor(){
 	numColor=$(this).val();	
@@ -25,8 +25,8 @@ $("#sizePicker").on("submit",function getSize(event){
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid(numGridHeight,numGridWidth) {
-	var objTable={};
-	var objRow={};
+	let objTable={};
+	let objRow={};
 
 	objTable=$("#pixelCanvas").first();
 
@@ -34,10 +34,10 @@ function makeGrid(numGridHeight,numGridWidth) {
 	objTable.html("");
 	
 	// Create table
-	for (var row=1;row<=numGridHeight;row++){
+	for (let row=1;row<=numGridHeight;row++){
 		objTable.append("<tr></tr>");
 		objRow=objTable.children("tr").last();
-		for (var col=1;col<=numGridWidth;col++){
+		for (let col=1;col<=numGridWidth;col++){
 			objRow.append("<td></td>");
 		}
 	}
